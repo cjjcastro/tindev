@@ -7,7 +7,9 @@ const routes = require("./routes");
 
 const server = express();
 
-mongoose.connect(process.env.DB_CONN, {
+const dbConnection = process.env.DB_CONN;
+
+mongoose.connect(dbConnection, {
   useNewUrlParser: true
 });
 
