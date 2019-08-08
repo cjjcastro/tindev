@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  tindev-backend:
+    container_name: tindev-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/usr/src/app/
+      - /usr/src/app/node_modules
+    ports:
+      - "3333:3333"
